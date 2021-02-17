@@ -1,0 +1,103 @@
+@import "~ng-zorro-antd/src/ng-zorro-antd.less";
+@import "./style-theme.less";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|La+Belle+Aurore|Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+@font-face {
+  src: url("../src/assets/fonts/monofur/Monofur.ttf");
+  font-family: 'Monofur', cursive;
+}
+
+body {
+  background-color: #252525;
+}
+
+h1, h2, h3, h5, h6, p, a {
+  font-family: 'Poiret One', cursive;
+}
+
+.padding{
+  padding: 2.5em;
+}
+
+.container{
+  height: 75vh;
+}
+
+.text-title-style {
+  font-size: 1.5em;
+  display: inline-block;
+  text-shadow: 4px 4px 0 #f65151;
+}
+
+h1.title-text {
+  font-family: 'Lobster', cursive;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 3em;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  elevation: 60deg
+}
+
+h1.title-text:before {
+  content: "<h1>";
+  .tag-code(auto, auto, -1em, auto);
+}
+
+h1.title-text:after {
+  content: "</h1>";
+  .tag-code(auto, auto, 2em, auto);
+}
+
+p.subtitle-text {
+  font-weight: normal;
+  font-size: 1.2em;
+  color: #8d8d8d;
+}
+
+.tag-code-span-top{
+  .tag-code(auto, auto, -3em, auto);
+}
+
+.tag-code-span-bottom{
+  .tag-code(auto, auto, 0.5em, auto);
+}
+
+
+.gutter-row {
+  margin: 2em 0;
+  padding: 1em 0;
+}
+
+.box-row {
+  box-sizing: border-box;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.tag-code(@margin-left: auto, @margin-right: auto, @margin-top: auto, @margin-bottom: auto) {
+  color: #515152;
+  opacity: 0.4;
+  font-style: italic;
+  font-size: 18px;
+  position: absolute;
+  margin: @margin-top @margin-right @margin-bottom @margin-left;
+  font-family: 'La Belle Aurore', cursive;
+}
+
+@media screen and (max-width: 600px) {
+  .padding{
+    padding: 1em;
+  }
+}
+
+@keyframes slideInFromStartTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

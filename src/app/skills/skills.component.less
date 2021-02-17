@@ -1,0 +1,69 @@
+.title-text{
+  color: #f65151;
+}
+
+.text-title-style{
+  color: #FFF;
+}
+
+.skills-box{
+  height: 20em;
+  width: 100%;
+  display: grid;
+}
+
+.skills-zone{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.skills-text{
+  color: #FFF;
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  text-shadow: 2px 2px 0 #f65151;
+  margin: 2.5em 0;
+}
+
+.skills-text:hover{
+  transform: scale(1.1);
+}
+
+.skills-text::after {
+  content: "Java";
+  display: block;
+  animation: changeLetter 12s ease-in-out infinite;
+}
+
+@media screen and (max-width: 600px) {
+  .skills-text{
+    margin: 1em 0;
+  }
+  .text-title-style{
+    font-size: 1.2em;
+  }
+}
+
+@keyframes changeLetter {
+  0% {
+    content: "JavaScript";
+  }
+  20%{
+    content: "Angular";
+  }
+  40%{
+    content: "Android";
+  }
+  60% {
+    content: "Ionic";
+  }
+  80% {
+    content: "Cordova";
+  }
+  100% {
+    content: "NodeJS";
+  }
+}

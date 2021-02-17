@@ -1,0 +1,42 @@
+.title-text{
+  color: #f65151;
+}
+
+.item-form {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.item-form-ng-control {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.map-box {
+  margin-top: -2.5em;
+  position: absolute;
+  right: 0;
+  left: auto;
+  padding: 0;
+  height: 80vh;
+}
+
+agm-map {
+  height: 80vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .map-box {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  agm-map {
+    height: 50vh;
+  }
+  .map-box {
+    height: 50vh;
+  }
+}

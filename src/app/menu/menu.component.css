@@ -1,0 +1,59 @@
+.nav-menu {
+  background-color: #121212;
+}
+ul.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0;
+  height: 5em;
+}
+ul.nav-menu li {
+  text-align: center;
+  padding: 1em;
+  animation: 1s ease-out 0s 1 slideInFromStartTop;
+}
+ul.nav-menu li a {
+  font-size: 1.2em;
+}
+ul.nav-menu li a i {
+  font-size: 1.5em;
+  display: none;
+  animation: 0.5s ease-out 0s 1 slideInFromStartTop;
+}
+ul.nav-menu li:nth-child(1) a:after {
+  content: 'Home';
+}
+ul.nav-menu li:nth-child(3) a:after {
+  content: 'About';
+}
+ul.nav-menu li:nth-child(5) a:after {
+  content: 'Skills';
+}
+ul.nav-menu li:nth-child(7) a:after {
+  content: 'Contact';
+}
+ul.nav-menu li:hover a i {
+  display: block;
+  opacity: 1;
+}
+ul.nav-menu .separator-item-menu {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 600px) {
+  .nav {
+    box-shadow: 0 0 4px #000;
+  }
+  ul.nav-menu li a i {
+    display: block;
+  }
+  ul.nav-menu:nth-child(-n+5) a:after {
+    content: '';
+  }
+  ul.nav-menu .separator-item-menu {
+    display: none;
+  }
+}

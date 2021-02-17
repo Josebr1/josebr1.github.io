@@ -1,0 +1,101 @@
+<div nz-row [nzGutter]="{ xs: 24, sm: 24, md: 12, lg: 12, xl: 12, xxl: 12 }" class="box-row padding">
+  <div nz-col nzSpan="12" [nzXs]="24" [nzSm]="24" [nzMd]="10" class="gutter-row">
+
+    <span class="tag-code-span-top">
+      &lt;/body&gt;
+    </span>
+
+    <div class="text-zone">
+
+      <h1 class="title-text animated rubberBand">
+        Contate-me
+      </h1>
+      <p class="subtitle-text animated fadeIn">
+        Se você tiver alguma dúvida, não hesite em entrar em contato usando o formulário abaixo…
+      </p>
+    </div>
+
+
+    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+
+
+      <div nz-row [nzGutter]="{ xs: 24, sm: 24, md: 12, lg: 12, xl: 12, xxl: 12 }" class="box-row">
+        <div nz-col nzSpan="12" [nzXs]="24" [nzSm]="24" [nzMd]="12" style="padding: 0;" class="item-form animated fadeInLeft">
+          <nz-form-item>
+            <nz-form-control>
+              <nz-input-group nzPrefixIcon="anticon anticon-user">
+                <input type="text" nz-input formControlName="name" placeholder="Nome">
+              </nz-input-group>
+              <nz-form-explain *ngIf="validateForm.get('name').dirty && validateForm.get('name').errors" class="animated bounceIn">Por favor insira seu nome!
+              </nz-form-explain>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+
+        <div nz-col nzSpan="12" [nzXs]="24" [nzSm]="24" [nzMd]="12" class="item-form animated fadeInLeft">
+          <nz-form-item>
+            <nz-form-control>
+              <nz-input-group nzPrefixIcon="anticon anticon-mail">
+                <input type="text" nz-input formControlName="email" placeholder="E-Mail">
+              </nz-input-group>
+              <nz-form-explain *ngIf="validateForm.get('email').dirty && validateForm.get('email').errors" class="animated bounceIn">Por favor insira seu e-mail!
+              </nz-form-explain>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+
+      </div>
+
+      <nz-form-item class="animated fadeInLeft">
+        <nz-form-control>
+          <nz-input-group nzPrefixIcon="anticon anticon-question">
+            <input type="text" nz-input formControlName="subject" placeholder="Assunto">
+          </nz-input-group>
+          <nz-form-explain *ngIf="validateForm.get('subject').dirty && validateForm.get('subject').errors" class="animated bounceIn">Por favor insira seu Assunto!
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item class="animated fadeInLeft">
+        <nz-form-control>
+          <nz-input-group nzPrefixIcon="anticon anticon-message">
+            <textarea nz-input placeholder="Mensagem" formControlName="message" [nzAutosize]="{ minRows: 2, maxRows: 6 }"></textarea>
+          </nz-input-group>
+          <nz-form-explain *ngIf="validateForm.get('message').dirty && validateForm.get('message').errors" class="animated bounceIn">Por favor insira sua mensagem!
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item class="animated fadeInLeft">
+        <nz-form-control>
+          <button nz-button style="margin-left: auto; margin-right: 0; display: block;" [nzType]="'default'">Enviar</button>
+        </nz-form-control>
+      </nz-form-item>
+
+    </form>
+
+    <span class="tag-code-span-bottom">
+      &nbsp;&nbsp;&nbsp;&lt;/body&gt;
+      <br> &lt;/html&gt;
+    </span>
+  </div>
+
+  <div nz-col nzSpan="12" [nzXs]="24" [nzSm]="24" [nzMd]="12" class="gutter-row map-box">
+    <!-- this creates a google map on the page with the given lat/lng from -->
+    <!-- the component as the initial center of the map: -->
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [styles]="style">
+      <agm-marker [latitude]="lat" [longitude]="lng">
+        <agm-info-window>
+          <strong>José Antônio</strong>
+          <p>Rua Cícero Paulo 219F<br>
+            Engenheiro Goulart<br>
+            São Paulo - SP</p>
+          <strong><em>jose.silva.br@outlook.com</em></strong>
+          <br>
+          <strong><em>+55 11 952582091</em></strong>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
+
+  </div>
+</div>
