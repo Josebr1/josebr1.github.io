@@ -1,0 +1,24 @@
+.gutter-row {
+  margin: 0 0;
+  padding: 0 0;
+}
+ul.social-footer {
+  list-style: none;
+  widows: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+ul.social-footer li {
+  padding: 1.5em;
+}
+ul.social-footer li a i {
+  font-size: 2em;
+}
+.footer-copy {
+  text-align: center;
+  color: #515152;
+}
