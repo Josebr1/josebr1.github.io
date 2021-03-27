@@ -11,42 +11,30 @@ ul.nav-menu {
   padding: 0;
   margin-bottom: 0;
   height: 5em;
+  margin-top: 1em;
 
   li {
     text-align: center;
     padding: 1em;
-    animation: 1s ease-out 0s 1 slideInFromStartTop;
 
     a {
-
       font-size: 1.2em;
+      background: rgb(148,102,255);
+      background: linear-gradient(180deg, rgba(148,102,255,1) 0%, rgba(105,70,186,1) 53%, rgba(79,35,181,1) 82%);
+      border-radius: 5px;
+      padding: 16px;
+      width: 5rem;
+      box-shadow: 10px 5px;
+      transition: .5s;
 
-      i {
-        font-size: 1.5em;
-        display: none;
-        animation: 0.5s ease-out 0s 1 slideInFromStartTop;
+      &:hover {
+        padding: 20px;
+        box-shadow: 0 0;
       }
-    }
 
-    &:nth-child(1) a:after {
-      content: 'Home';
-    }
-
-    &:nth-child(3) a:after {
-      content: 'About';
-    }
-
-    &:nth-child(5) a:after {
-      content: 'Skills';
-    }
-
-    &:nth-child(7) a:after {
-      content: 'Contact';
-    }
-
-    &:hover a i {
-      display: block;
-      opacity: 1;
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
 
@@ -56,47 +44,18 @@ ul.nav-menu {
   }
 }
 
-// .divider-font{
-//   margin-top: 0;
-//   font-family: 'La Belle Aurore', cursive;
-//   font-weight: bold;
-// }
-
 @media screen and (max-width: 600px) {
-  .nav {
-    box-shadow: 0 0 4px #000;
-  }
-
   ul.nav-menu {
+    width: 100%;
 
-    li a i {
-      display: block;
-    }
+    li {
+      padding: 0;
 
-    &:nth-child(-n+5) a:after {
-      content: '';
-    }
-
-    .separator-item-menu{
-      display: none;
+      a {
+        box-shadow: 4px 5px;
+      }
     }
   }
-
-  // .divider-font{
-  //   margin-top: 0.5em;
-  //   font-size: 1.5em;
-  //   position: relative;
-  //   top: -1.2em;
-  //   font-weight: normal;
-  // }
-
-  // .divider-font:before{
-  //   border: none;
-  // }
-
-  // .divider-font:after{
-  //   border: none;
-  // }
 }
 
 
