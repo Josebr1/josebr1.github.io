@@ -1,5 +1,5 @@
 .title-text{
-  color: #f65151;
+  color: rgba(105,70,186,1);
 }
 
 .text-title-style{
@@ -20,50 +20,137 @@
     width: 100%;
 }
 
-.skills-text{
-  color: #FFF;
-  font-family: 'Lobster', cursive;
-  font-size: 5em;
-  text-shadow: 2px 2px 0 #f65151;
-  margin: 2.5em 0;
+.skills-diagram {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 35em;
+  margin: 8em auto 2em;
+
+  dt {
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    transition: 1s;
+
+    &:hover {
+      transform: scale(1.8);
+      z-index: 9999 !important;
+      cursor: pointer;
+      position: relative;
+    }
+  }
+
+  > dd {
+    display: none;
+  }
+
+  .skill-2 {
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    background-color: rgba(70,25,126, 1);
+    border-color: rgba(70,25,126, 1);
+    color: rgba(0, 0, 0, 1);
+  }
+  .skill-3 {
+    vertical-align: middle;
+    width: 6em;
+    height: 6em;
+    line-height: 6em;
+    background-color: rgba(25,66,96, 1);
+    border-color: rgba(25,66,96, 1);
+    color: rgba(0, 0, 0, 1);
+  }
+  .skill-4 {
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    background-color: rgba(191,31,95,1);
+    border-color: rgba(191,31,95, 1);
+    color: rgba(0, 0,0, 1);
+  }
+  .skill-5 {
+    vertical-align: bottom;
+    width: 5em;
+    height: 5em;
+    line-height: 5em;
+    background-color: rgba(19,169,194, 1);
+    border-color: rgba(19,169,194, 1);
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .skill-6 {
+    vertical-align: top;
+    width: 6em;
+    height: 6em;
+    line-height: 6em;
+    background-color: rgba(255,77,0, 1);
+    border-color: rgba(1255,77,0, 1);
+    color: rgba(0,0,0, 1);
+  }
+
+  .skill-7 {
+    width: 7em;
+    height: 7em;
+    line-height: 7em;
+    
+    background-color: rgba(255,192,34, 1);
+    border-color: rgba(255,192,34, 1);
+    color: rgba(0,0,0, 1);
+  }
+  .skill-8 {
+    vertical-align: bottom;
+    width: 8em;
+    height: 8em;
+    line-height: 8em;
+    background-color: rgba(90,75,170, 1);
+    border-color: rgba(90,75,170, 1);
+    color: rgba(0, 0, 0, 1);
+  }
+  .skill-9 {
+    width: 11em;
+    height: 11em;
+    line-height: 11em;
+    
+    background-color: rgba(9,52,206, 1);
+    border-color: rgba(9,52,206, 1);
+    color: rgba(0,0,0, 1);
+  }
+  .skill-10 {
+    width: 14em;
+    height: 14em;
+    line-height: 14em;
+    background-color: rgba(84,171,40, 1);
+    border-color: rgba(84,171,40, 1);
+    color: rgba(0,0,0, 1);
+  }
 }
 
-.skills-text:hover{
-  transform: scale(1.1);
-}
-
-.skills-text::after {
-  content: "Java";
+/* Support vertical mode */
+.skills-diagram-vertical dt {
   display: block;
-  animation: changeLetter 12s ease-in-out infinite;
+  margin: .25em auto;
 }
+
+
 
 @media screen and (max-width: 600px) {
-  .skills-text{
-    margin: 1em 0;
-  }
   .text-title-style{
     font-size: 1.2em;
-  }
-}
-
-@keyframes changeLetter {
-  0% {
-    content: "JavaScript";
-  }
-  20%{
-    content: "Angular";
-  }
-  40%{
-    content: "Android";
-  }
-  60% {
-    content: "Ionic";
-  }
-  80% {
-    content: "Cordova";
-  }
-  100% {
-    content: "NodeJS";
   }
 }

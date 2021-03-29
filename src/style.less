@@ -2,7 +2,7 @@
 @import "./style-theme.less";
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Coming+Soon|La+Belle+Aurore|Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|La+Belle+Aurore|Noto+Sans|Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
 @font-face {
@@ -11,8 +11,10 @@
 }
 
 body {
-  background-color: #121214;
+  background: linear-gradient(90deg, #121214 21px, transparent 1%) center, linear-gradient(#121214 21px, transparent 1%) center, rgb(65, 65, 65);
+  background-size: 22px 22px;
 }
+
 
 h1, h2, h3, h5, h6, p, a {
   font-family: 'Poiret One', cursive;
@@ -33,14 +35,14 @@ h1, h2, h3, h5, h6, p, a {
 .text-title-style {
   font-size: 1.5em;
   display: inline-block;
-  text-shadow: 4px 4px 0 #f65151;
+  text-shadow: 4px 4px 0 #4f23b5;
 }
 
 h1.title-text {
   font-family: 'Lobster', cursive;
   color: #FFF;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 4em;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   elevation: 60deg
 }
@@ -57,8 +59,28 @@ h1.title-text:after {
 
 p.subtitle-text {
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #8d8d8d;
+}
+
+p:before {
+  content: "<p>";
+  .tag-code(auto, auto, -1em, auto);
+}
+
+p:after {
+  content: "</p>";
+  .tag-code(auto, auto, 2em, auto);
+}
+
+.sounds:before {
+  content: "<audio>";
+  .tag-code(auto, auto, -1em, auto);
+}
+
+.sounds:after {
+  content: "</audio>";
+  .tag-code(auto, auto, 12em, auto);
 }
 
 .tag-code-span-top{
