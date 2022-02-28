@@ -24,7 +24,8 @@ import { AgmCoreModule } from '@agm/core';
     ReactiveFormsModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB_OGeKnZYlkxlMDviRLtsPW81y-GtBmuc'
+      apiKey: 'AIzaSyB_OGeKnZYlkxlMDviRLtsPW81y-GtBmuc',
+      libraries: ['places']
     }),
     NgZorroAntdModule.forRoot()
   ],

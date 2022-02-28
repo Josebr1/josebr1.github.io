@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+declare var $:any;
 
 @Component({
   selector: 'app-menu',
@@ -12,6 +13,15 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  
+  close() {
+    document.getElementById("navD").style.width = "0";
+  }
+
+  open() {
+    document.getElementById("navD").style.width = "250px";
   }
 
 }

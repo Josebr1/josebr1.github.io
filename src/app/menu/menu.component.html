@@ -1,13 +1,12 @@
 <div class="nav">
+  <span class="d-icon" style="font-size:30px;cursor:pointer" (click)="open()">&#9776;</span>
 
-  <ul class="nav-menu">
-    <li><a routerLink="/home">HOME</a></li>
-    <li class="separator-item-menu">/</li>
-    <li><a routerLink="/about">SOBRE</a></li>
-    <li class="separator-item-menu">/</li>
-    <li><a routerLink="/skills">SKILLS</a></li>
-    <li class="separator-item-menu">/</li>
-    <li><a routerLink="/contact">CONTATO</a></li>
+  <ul class="nav-menu nav-d" id="navD">
+    <a href="javascript:void(0)" class="close-btn-nav-d" (click)="close()">&times;</a>
+    <li><a routerLink="/home"><span class="tag-menu">01.</span> HOME</a></li>
+    <li><a routerLink="/about"><span class="tag-menu">02.</span> SOBRE</a></li>
+    <li><a routerLink="/skills"><span class="tag-menu">03.</span> SKILLS</a></li>
+    <li><a routerLink="/contact"><span class="tag-menu">04.</span> CONTATO</a></li>
   </ul>
 </div>
 <!--nz-divider nzText="Desenvolvedor Full-Stack" class="divider-font"></nz-divider-->

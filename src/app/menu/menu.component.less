@@ -2,8 +2,12 @@
   background-color: #121212;
 }
 
-ul.nav-menu {
+.d-icon {
+  color: #f1f1f1;
+  display: none;
+}
 
+ul.nav-menu {
   list-style: none;
   display: flex;
   align-items: center;
@@ -17,43 +21,93 @@ ul.nav-menu {
     text-align: center;
     padding: 1em;
 
+
+    .tag-menu {
+      color: rgb(148,102,255);
+      font-style: normal;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+    }
+
     a {
-      font-size: 1.2em;
-      background: rgb(148,102,255);
-      background: linear-gradient(180deg, rgba(148,102,255,1) 0%, rgba(105,70,186,1) 53%, rgba(79,35,181,1) 82%);
-      border-radius: 5px;
-      padding: 16px;
-      width: 5rem;
-      box-shadow: 10px 5px;
-      transition: .5s;
+
+      font-weight: bold;
 
       &:hover {
-        padding: 20px;
-        box-shadow: 0 0;
+        color: rgb(148,102,255);
+        font-weight: bold;
       }
 
-      &:focus {
-        text-decoration: none;
-      }
     }
   }
+}
 
-  .separator-item-menu{
-    padding: 0;
-    margin: 0;
+ul.nav-d {
+  a.close-btn-nav-d {
+    display: none;
   }
 }
 
 @media screen and (max-width: 600px) {
+
+  .d-icon {
+    display: block;
+    margin: 25px;
+    color:  rgb(148,102,255);
+  }
+
   ul.nav-menu {
     width: 100%;
+    margin: 0;
+    flex-direction: column;
+    gap: 25px;
 
     li {
-      padding: 0;
+      padding: 0 5px;
 
       a {
-        box-shadow: 4px 5px;
+        padding: 0.2em;
       }
+    }
+  }
+
+  ul.nav-d {
+
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    > a { 
+      display: block;
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+
+      &:hover {
+        color: #f1f1f1;
+      }
+    }
+
+    a.close-btn-nav-d {
+      display: block;
+    }
+
+    > .close-btn-nav-d {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 60px;
+      margin-left: 50px;
     }
   }
 }
